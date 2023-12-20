@@ -5,8 +5,8 @@ Project Duration: 2 week sprint
 
 Rochester Community Initiative is a database is a resource application that keeps a record of the mental health providers in Rochester. The application allows for mental health providers to make an account and have it be displayed on this platform. Users don't need to log in to be able to use this app. Users can click on the 'providers' button in the navigation bar to see a list of all the providers available on this platform. Users can then search and filter providers by different criterias such as specialty, insurance and occupations. Users are then able to send providers emails by going to each provider's profile, directly connecting each user with a mental health professional.
 
-Live Version deployed on Heroku at:
-https://rcimentalhealth.herokuapp.com/#/home
+<!-- Live Version deployed on Heroku at:
+https://rcimentalhealth.herokuapp.com/#/home -->
 
 ## Planing and Development
 ### Database ERD - Entity Relationship Diagram
