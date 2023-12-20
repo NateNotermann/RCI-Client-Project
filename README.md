@@ -8,7 +8,21 @@ Rochester Community Initiative is a database is a resource application that keep
 Live Version deployed on Heroku at:
 https://rcimentalhealth.herokuapp.com/#/home
 
-## Screenshot
+## Planing and Development
+### Database ERD - Entity Relationship Diagram
+![image description](public/Screenshot.png/DatabaseERD.png)
+
+### User Stories - Planned out in Figma
+![image description](public/Screenshot.png/UserStory.png)
+
+
+### UI Design - Components & Page Design mockups in Figma
+![image description](public/Screenshot.png/Browse.png)
+![image description](public/Screenshot.png/Provider.png)
+
+
+
+## Screenshots
 ![image description](public/Screenshot.png/HomePage.png)
 ![image description](public/Screenshot.png/ProviderListView.png)
 ![image description](public/Screenshot.png/DetailView.png)
