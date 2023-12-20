@@ -1,7 +1,7 @@
 
 # Rochester Community Initiative Portal
 
-Project was done in a 3 week sprint. 
+Project was developed in a 3 week sprint. 
 1 week for Scope & Planning.
 2 weeks for coding & development.
 
