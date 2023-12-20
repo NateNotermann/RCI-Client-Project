@@ -16,18 +16,31 @@ https://rcimentalhealth.herokuapp.com/#/home
 ![image description](public/Screenshot.png/UserStory.png)
 
 
-### UI Design - Components & Page Design mockups in Figma
+## UI Design - Components & Page Design mockups in Figma
+### List of Providers Page
 ![image description](public/Screenshot.png/Browse.png)
+### Provider Details Page
 ![image description](public/Screenshot.png/Provider.png)
 
 
 
-## Screenshots
+## Final Product
+### Home Page
 ![image description](public/Screenshot.png/HomePage.png)
+
+### List of Providers Page
 ![image description](public/Screenshot.png/ProviderListView.png)
+
+### Provider Details Page
 ![image description](public/Screenshot.png/DetailView.png)
+
+### Login Page
 ![image description](public/Screenshot.png/Login.png)
+
+### Registration Page
 ![image description](public/Screenshot.png/ProfileRegister.png)
+
+### Profile Info Verification Page
 ![image description](public/Screenshot.png/ProfileInfoVerification.png)
 
 ## Prerequisites
