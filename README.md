@@ -1,9 +1,11 @@
 
-# Rochester Community Inititive
+# Rochester Community Initiative Portal
 
-Project Duration: 2 week sprint
+Project was done in a 3 week sprint. 
+1 week for Scope & Planning.
+2 weeks for coding & development.
 
-Rochester Community Initiative is a database is a resource application that keeps a record of the mental health providers in Rochester. The application allows for mental health providers to make an account and have it be displayed on this platform. Users don't need to log in to be able to use this app. Users can click on the 'providers' button in the navigation bar to see a list of all the providers available on this platform. Users can then search and filter providers by different criterias such as specialty, insurance and occupations. Users are then able to send providers emails by going to each provider's profile, directly connecting each user with a mental health professional.
+Rochester Community Initiative is a database and web portal that keeps a record of the mental health providers in Rochester. The application allows for mental health providers to make an account for students and teacher to access in the portal. Users don't need to log in to be able to use this app. Users can click on the 'providers' button in the navigation bar to see a list of all the providers available on this platform. Users can search and filter providers by different criteria such as specialty, insurance and occupations. Users are also able to email providers on the providers profile page, directly connecting each user with a mental health professional.
 
 <!-- Live Version deployed on Heroku at:
 https://rcimentalhealth.herokuapp.com/#/home -->
