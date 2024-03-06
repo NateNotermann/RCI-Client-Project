@@ -34,7 +34,7 @@ export default function LoginForm() {
             } catch (error) {
                 dispatch({ type: 'LOGIN_INPUT_ERROR' });
                 console.log('LOGIN--------------ERROR---------', error);
-                // setErrorMessage('Looks like this user does not exist.')
+                setErrorMessage('Looks like this user does not exist.')
             }
 
         } 
