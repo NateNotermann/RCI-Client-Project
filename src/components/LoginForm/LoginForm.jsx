@@ -13,6 +13,8 @@ import {
 export default function LoginForm() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState(null);
+    
     const errors = useSelector((store) => store.errors);
     const dispatch = useDispatch();
     const history = useHistory();
@@ -27,10 +29,18 @@ export default function LoginForm() {
                     password: password,
                 },
             });
-            dispatch({ type: 'FETCH_PROVIDER_PROFILE', payload: user.id });
-        } else {
-            dispatch({ type: 'LOGIN_INPUT_ERROR' });
-        }
+            try {
+                dispatch({ type: 'FETCH_PROVIDER_PROFILE', payload: user.id });
+            } catch (error) {
+                dispatch({ type: 'LOGIN_INPUT_ERROR' });
+                console.log('LOGIN--------------ERROR---------', error);
+                // setErrorMessage('Looks like this user does not exist.')
+            }
+
+        } 
+
+        // else {console.log('login elseif test');}
+
     }; // end login
 
     return (
@@ -52,6 +62,12 @@ export default function LoginForm() {
             >
                 Login
             </Typography>
+            <br></br>
+            {errorMessage ? 
+            ( <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'var(--red)' }}>{errorMessage}</Typography>) 
+            : 
+            (<Typography variant="body1" sx={{ fontWeight: 'bold', color: 'var(--cornflower)' }}>Type in your username and password to login  </Typography>)}
+
             <Grid item margin={3}>
                 {errors.registrationMessage && (
                     <Typography variant="h6" className="alert" role="alert">
