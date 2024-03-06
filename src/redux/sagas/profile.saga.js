@@ -87,20 +87,24 @@ function* fetchProfileServices(action) {
             payload: services.data,
         });
     } catch (error) {
-        console.log('error in fetchProfileServices', error);
+        console.log('error in fetchProfileServices function', error);
     }
 }
 
 function* editProfile(action) {
     console.log('EditProfile is:>>', action.payload);
-    const res = yield axios.put(
-        `/api/providerProfile/${action.payload}`,
-        action.payload
-    );
-    yield put({
-        type: 'FETCH_PROVIDER_PROFILE',
-        payload: res.data,
-    });
+    try{
+        const res = yield axios.put(
+            `/api/providerProfile/${action.payload}`,
+            action.payload
+            );
+            yield put({
+                type: 'FETCH_PROVIDER_PROFILE',
+                payload: res.data,
+            });
+        } catch {
+            console.log(('error in editProfile function', error));
+        }
 }
 
 function* providerProfileSaga() {

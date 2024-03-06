@@ -202,6 +202,10 @@ function*  editProvider(action) {
         });
     } catch (error) {
         console.log('Edit this provider error: error in providers saga', error);
+        console.log(
+            'Here is the response in the providers saga-editProvider: response.data.id',
+            response.data.id
+        );
     }
 }
 
