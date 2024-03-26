@@ -6,6 +6,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Grid from '@material-ui/core/Grid';
 
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
@@ -37,9 +38,16 @@ function OccupationsDropdownMenu() {
         });
     }
 
+    //{/* specialization dropdown menu */}
     return (
-        <div>
-            {/* specialization dropdown menu */}
+        <Grid Item 
+            sx={12}  
+            style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center', }}>
+
             <FormControl sx={{ m: 1, width: 250 }}>
                 <InputLabel id="multiple-occupations-label">
                     Occupations
@@ -76,7 +84,7 @@ function OccupationsDropdownMenu() {
                     filter
                 </Button>
             </ButtonGroup>
-        </div>
+ </Grid> 
     );
 }
 
