@@ -143,25 +143,27 @@ const updatedService = useSelector(
   console.log(`What is profile.user_id`, user.id);
 
   return (
-    <div className="row">
-      <div></div>
-      <div className="column">
-        <img
-          style={{
-            width: 300,
-            height: 300,
-            margin: '1rem',
-            borderRadius: 20,
-          }}
-          src={profile.picture}
-        />
-
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
+    <Grid container className="row" 
+    >
+      <Grid Item className="column"   
+            style={{
+              width: 'fit-content'
+            }}    
+      >
+        <Grid Item>
+          <img
+            style={{
+              width: 300,
+              height: 300,
+              margin: '1rem',
+              borderRadius: 20,
+            }}
+            src={profile.picture}
+          />
+        </Grid>
+        
+      
+        <Grid Item >
           {' '}
           {/* this div controller the "EDIT" buttons conditional rendering*/}
           {edit ? (
@@ -170,25 +172,39 @@ const updatedService = useSelector(
               Discard Changes
             </Button>
           ) : (
-            <>
+          
+              <Grid container
+                  style={{
+                    // width: '100%',
+                    // display: 'flex',
+                    // flexDirection: 'row',
+                    justifyContent: 'center',
+                  }}
+              >
               <Button item variant="contained" onClick={toggleEdit}>
                 <EditIcon /> Edit Profile
               </Button>
               <Button variant="contained" color="secondary">
                 <LogOutButton />
               </Button>
-            </>
-          )}
-        </Box>
-      </div>
+              </Grid>
 
-      <div>
+            
+          )}
+        </Grid>
+      </Grid>
+
+      <Grid Item 
+      style={{
+        // display: 'flex',
+        // flexDirection: 'row'
+      }}>
         {/* this div controls the "Input fields & Info" conditional rendering*/}
         {edit ? (
-          <div>
+          <Grid Item>
             {' '}
             {/* "?" - If TRUE, show input editable fields  */}
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} id='form'>
               <div className="column">
                 <h3>You Are Editing Your Profile Info</h3>
                 <br></br>
@@ -270,7 +286,7 @@ const updatedService = useSelector(
                 <Typography fontWeight="bold">Services:</Typography>
                 <ProfileServices />
                 <br></br>
-           <RegisterServicesDropdown/>
+                  <RegisterServicesDropdown/>
                 <br></br>
 
                 {/* Specialities INPUT  */}
@@ -288,13 +304,14 @@ const updatedService = useSelector(
                 </Button>
               </div>
             </form>
-          </div>
+          </Grid>
         ) : (
-          <div className="row">
+          <Grid container className="row"
+          >
             {' '}
             {/* ":" - If FALSE, show Non-editable Text Below */}
             {/* COLUMN 1 */}
-            <div className="column">
+            <Grid Item className="column">
               <div className="info">
                 <h4>Name:</h4>
                 {profile.name}
@@ -311,9 +328,9 @@ const updatedService = useSelector(
                 <h4>Occupation</h4>
                 <ProfileOccupations />
               </div>
-            </div>
+            </Grid>
             {/* COLUMN 2 */}
-            <div className="column">
+            <Grid Item className="column">
               <ul className="info">
                 <h4>Contact Info:</h4>
                 <li>Availability: {profile.availability}</li>
@@ -326,10 +343,10 @@ const updatedService = useSelector(
                 <h4>Specialties:</h4>
                 <ProfileSpecializations />
               </ul>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         )}
-      </div>
-    </div>
+      </Grid>
+    </Grid>
   );
 }

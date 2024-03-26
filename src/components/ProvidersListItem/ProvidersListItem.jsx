@@ -44,6 +44,7 @@ export default function ProvidersListItem({ provider }) {
                         width: '70vw',
                         marginY: 2,
                         borderRadius: 5,
+                        noWrap: true,
                     
                         '&:hover': {
                             boxShadow: '0.1rem 0.1rem 1rem 0.1rem gray',
@@ -53,14 +54,14 @@ export default function ProvidersListItem({ provider }) {
                     }}
                 >
                     {/* LEFT COLUMN */}
-                    <Grid
-                        Item
+                    <Grid Item
                         sx={{
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
                             borderRadius: 5,
                             margin: 'auto 1rem',
+                            
                         }}
                     >
                         <Grid item>
@@ -78,18 +79,28 @@ export default function ProvidersListItem({ provider }) {
                         container
                         id="center-column"
                         sx={{
+                            maxHeight: '100%',
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'left',
+                            overflow: 'hidden', 
+                            textOverflow: 'ellipsis'
+                            // borderColor: 'red',
+                            // borderStyle: 'dashed',
+
                         }}
                     >
                         {/* NAME */}
-                        <Grid item>
+                        <Grid item 
+                            >
                             <Typography
-                                variant="h4"
+                                variant="h6"
                                 sx={{
-                                    width: '30vw',
-                                    textOverflow: 'ellipsis',
+                                    padding: .1,
+                                    margin: .1,
+                                    // width: '30vw',
+                                    minHeight: '2vh',
+                                    maxWidth: '100%',
                                     color: 'var(--cornflower)',
                                 }}
                             >
@@ -102,8 +113,13 @@ export default function ProvidersListItem({ provider }) {
                             <Typography
                                 variant="h6"
                                 sx={{
-                                    width: '40vw',
-                                    height: '5vh',
+                                    // width: '40vw',
+                                    maxHeight: '100%',
+                                    maxWidth: '100%',
+                                    // height: '5vh',
+                                    padding: .1,
+                                    margin: .1,
+                                    overflow: 'hidden', 
                                     textOverflow: 'ellipsis',
                                 }}
                             >
@@ -116,6 +132,8 @@ export default function ProvidersListItem({ provider }) {
                             container
                             id="right-column"
                             sx={{
+                                margin: 0.1,
+                                padding: .01,
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'left',
