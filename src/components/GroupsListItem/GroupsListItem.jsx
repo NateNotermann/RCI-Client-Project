@@ -23,7 +23,7 @@ export default function GroupsListItem({ group }) {
     };
 
     return (
-        <>
+
             <Box
                 style={{
                     display: 'flex',
@@ -82,8 +82,12 @@ export default function GroupsListItem({ group }) {
                         container
                         id="center-column"
                         sx={{
+                            maxHeight: '100%',
                             display: 'flex',
                             flexDirection: 'column',
+                            justifyContent: 'left',
+                            overflow: 'hidden', 
+                            textOverflow: 'ellipsis'
                         }}
                     >
                         {/* NAME */}
@@ -91,8 +95,13 @@ export default function GroupsListItem({ group }) {
                             <Typography
                                 variant="h4"
                                 sx={{
-                                    width: '30vw',
-                                    textOverflow: 'ellipsis',
+                                    // width: '30vw',
+                                    // textOverflow: 'ellipsis',
+                                    padding: .1,
+                                    margin: .1,
+                                    // width: '30vw',
+                                    minHeight: '2vh',
+                                    maxWidth: '100%',
                                     color: 'var(--cornflower)',
                                 }}
                             >
@@ -105,8 +114,10 @@ export default function GroupsListItem({ group }) {
                             <Typography
                                 variant="h6"
                                 sx={{
-                                    width: '40vw',
-                                    height: '5vh',
+                                    maxHeight: '100%',
+                                    maxWidth: '100%',
+                                    // width: '40vw',
+                                    // height: '5vh',
                                 }}
                             >
                                 {/* {group.bio} */}
@@ -118,6 +129,8 @@ export default function GroupsListItem({ group }) {
                             container
                             id="right-column"
                             sx={{
+                                margin: 0.3,
+                                padding: .03,
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'left',
@@ -134,6 +147,6 @@ export default function GroupsListItem({ group }) {
                     </Grid>
                 </Grid>
             </Box>
-        </>
+
     );
 }

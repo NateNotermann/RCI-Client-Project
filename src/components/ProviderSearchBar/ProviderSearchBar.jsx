@@ -10,6 +10,7 @@ import Divider from '@mui/material/Divider';
 import MenuIcon from '@mui/icons-material/Menu';
 import DirectionsIcon from '@mui/icons-material/Directions';
 import Swal from 'sweetalert2';
+import Grid from '@material-ui/core/Grid';
 
 export default function ProviderSearchBar() {
     const dispatch = useDispatch();
@@ -44,44 +45,53 @@ export default function ProviderSearchBar() {
     }
 
     return (
-        <Paper
-            sx={{
-                p: '0.5rem 0.75rem',
-                display: 'flex',
-                alignItems: 'center',
-                width: 'fit-content',
-                height: 'fit-content',
-            }}
-        >
-            <form className="name" onSubmit={handleSearchSubmit}>
-                <TextField
-                    sx={{ pr: 1.5 }}
-                    id="search-bar"
-                    value={name}
-                    onChange={(e) => {
-                        setName(e.target.value);
-                    }}
-                    label="Search by Name"
-                    variant="outlined"
-                    placeholder="Search..."
-                    size="small"
-                />
+        <Grid Item 
+            sx={12}  
+            style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center', }}>
+
+            <Paper
+                sx={{
+                    p: '0.5rem 0.75rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    width: 'fit-content',
+                    height: 'fit-content',
+                }}
+            >
+                <form className="name" onSubmit={handleSearchSubmit}>
+                    <TextField
+                        sx={{ pr: 1.5 }}
+                        id="search-bar"
+                        value={name}
+                        onChange={(e) => {
+                            setName(e.target.value);
+                        }}
+                        label="Search by Name"
+                        variant="outlined"
+                        placeholder="Search..."
+                        size="small"
+                    />
+                    <IconButton
+                        type="click"
+                        onClick={handleSearchSubmit}
+                        aria-label="search"
+                    >
+                        <SearchIcon style={{ fill: 'blue', px: '1rem' }} />
+                    </IconButton>
+                </form>
+                <Divider sx={{ height: 30, m: 1 }} orientation="vertical" />
                 <IconButton
                     type="click"
-                    onClick={handleSearchSubmit}
-                    aria-label="search"
+                    aria-label="refresh"
+                    onClick={handleRefresh}
                 >
-                    <SearchIcon style={{ fill: 'blue', px: '1rem' }} />
+                    <RefreshIcon style={{ fill: 'blue' }} />
                 </IconButton>
-            </form>
-            <Divider sx={{ height: 30, m: 1 }} orientation="vertical" />
-            <IconButton
-                type="click"
-                aria-label="refresh"
-                onClick={handleRefresh}
-            >
-                <RefreshIcon style={{ fill: 'blue' }} />
-            </IconButton>
-        </Paper>
+            </Paper>
+        </Grid>
     );
 }

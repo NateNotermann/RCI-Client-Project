@@ -6,6 +6,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Grid from '@material-ui/core/Grid';
+
 import ProvidersListItem from '../ProvidersListItem/ProvidersListItem';
 import GroupsListItem from '../GroupsListItem/GroupsListItem';
 import ProviderSearchBar from '../ProviderSearchBar/ProviderSearchBar';
@@ -105,24 +106,52 @@ export default function ProvidersList() {
                     </Box>
 
                     {/* TAB PANEL - SEARCH AND FILTER */}
-                    <TabPanel value={value} index={0}>
+                    <TabPanel value={value} index={0}
+                    >
                         <Box
                             id="search-filter-bar"
                             style={{
                                 backgroundColor: 'var(--content)',
-                                height: 'fit-content',
                                 display: 'flex',
-                                alignSelf: 'center',
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                // alignSelf: 'center',
                                 justifyContent: 'center',
+                                
+                                height: 'fit-content',
+                                // width: 'fit-content',
+                                // width: '100%',
                                 padding: 10,
                                 marginBottom: '3rem',
                             }}
                         >
                             {/* COMPONENTS - SEARCH AND FILTER */}
-                            <ProviderSearchBar />
-                            <SpecializationsDropdownMenu />
-                            <InsurancesDropdownMenu />
-                            <OccupationsDropdownMenu />
+                            <Grid container spacing={0}
+                                style={{
+                                   display: 'flex',
+                                   flexDirection: 'row',
+                                //    alignSelf: 'center',
+                                //    justifyContent: 'center',
+                                        alignItems: 'center',
+                                //    height: 'fit-content',
+                                // width: 'fit-content',
+                                    width: '100%',
+                               }}
+                            
+                            >
+                                <Grid Item xs={12} sm={6} md={4} lg={3}>
+                                    <ProviderSearchBar />
+                                </Grid>
+                                <Grid Item xs={12} sm={6} md={4} lg={3} >
+                                    <SpecializationsDropdownMenu />
+                                </Grid>
+                                <Grid Item xs={12} sm={6} md={4} lg={3} >
+                                    <InsurancesDropdownMenu />
+                                </Grid>
+                                <Grid Item xs={12} sm={6} md={4} lg={3} >
+                                    <OccupationsDropdownMenu />
+                                </Grid>
+                            </Grid>
                         </Box>
 
                         {/* CONTAINER - PROVIDER MAP */}

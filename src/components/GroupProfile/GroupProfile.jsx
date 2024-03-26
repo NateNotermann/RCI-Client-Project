@@ -37,20 +37,38 @@ export default function GroupProfile() {
 
 
     return (
-      <div className="row">
-        <div className="column">
-          <h1>Group Profile</h1>
-          <img
-            style={{
-              width: 300,
-              height: 300,
-              margin: '1rem',
-              borderRadius: 20,
-            }}
-            src={details.picture}
-          />
+      <Grid container className="row"
+      style={{
+        // width: 'fit-content',
 
-          <div>
+      display: 'flex',
+      flexDirection: 'row',
+        borderStyle: 'solid',
+        borderColor: 'black',
+      }}    
+      >
+        <Grid Item className="column"
+      style={{
+        margin: .1,
+        padding: .1,
+        borderStyle: 'solid',
+        borderColor: 'orange',
+      }}     
+                    >
+          <h1>Group Profile</h1>
+          <Grid Item>
+            <img
+              style={{
+                width: 300,
+                height: 300,
+                margin: '1rem',
+                borderRadius: 20,
+              }}
+              src={details.picture}
+              />
+            </Grid>
+
+          <Grid Item>
             {' '}
             {/* this div controller the "EDIT" buttons conditional rendering*/}
             <Button item variant="contained">
@@ -65,10 +83,10 @@ export default function GroupProfile() {
                 Edit Profile Info
               </Button>
             )}
-          </div>
-        </div>
+          </Grid>
+        </Grid>
 
-        <div>
+
           {/* this div controls the "Input fields & Info" conditional rendering*/}
           {edit ? (
             <div>
@@ -89,31 +107,44 @@ export default function GroupProfile() {
               </div>
             </div>
           ) : (
-            <div className="row">
+            <Grid Item className="row"  xl={9} lg={8}  md={12} sx={12}               
+            style={{
+              // width: 'fit-content',
+              margin: .1,
+              padding: .1,
+              borderStyle: 'solid',
+              borderColor: 'pink',
+            }}   >
               {' '}
               {/* ":" - If FALSE, show Non-editable Text Below */}
               {/* COLUMN 1 */}
-              <div className="column">
-                <div className="info">{details.name}</div>
-                <div className="info">{details.bio}</div>
-                <div className="info">
-                  <p>{details.street}</p>
-                  <p>{details.city}</p>
-                  <p>{details.state}</p>
-                  <p>{details.zipcode}</p>
-                </div>
-              </div>
+              <Grid Item className="column" 
+                  style={{
+                    width: 'fit-content',
+                    height: 'fit-content',
+                    borderStyle: 'solid',
+                    borderColor: 'red',
+                  }} 
+              >
+                <Typography margin=".25rem" className="info">{details.name}</Typography>
+                <Typography margin=".25rem" className="info">{details.bio}</Typography>
+                <Grid Item margin=".25rem" className="info">
+                  <Typography>{details.street}</Typography>
+                  <Typography>{details.city}</Typography>
+                  <Typography>{details.state}</Typography>
+                  <Typography>{details.zipcode}</Typography>
+                </Grid>
+
+                <Grid Item  margin=".25rem" className="column info"  >
+                  <Typography >{details.website}</Typography>
+                  <Typography>{details.email}</Typography>
+                  <Typography>{details.phone}</Typography>
+                </Grid>
+              </Grid>
               {/* COLUMN 2 */}
-              <div className="column">
-                <div className="info">
-                  <p>{details.website}</p>
-                  <p>{details.email}</p>
-                  <p>{details.phone}</p>
-                </div>
-              </div>
-            </div>
+            </Grid>
           )}
-        </div>
-      </div>
+
+      </Grid>
     );
 }
