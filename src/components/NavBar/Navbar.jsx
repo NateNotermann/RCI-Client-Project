@@ -133,7 +133,7 @@ export default function Navbar() {
                                     width: 300,
                                     height: 100,
                                 }}
-                            />[Home Page]
+                            />
                         </Link>
                     </Box>
 
