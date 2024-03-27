@@ -128,11 +128,12 @@ export default function Navbar() {
                         <Link to="/">
                             <img
                                 src={rcilogo}
+                                alt="rci-logo"
                                 style={{
                                     width: 300,
                                     height: 100,
                                 }}
-                            />
+                            />[Home Page]
                         </Link>
                     </Box>
 
