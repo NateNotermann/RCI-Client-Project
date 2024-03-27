@@ -51,8 +51,6 @@ export default function GroupProfile() {
       style={{
         margin: .1,
         padding: .1,
-        borderStyle: 'solid',
-        borderColor: 'orange',
       }}     
                     >
           <h1>Group Profile</h1>
@@ -112,8 +110,6 @@ export default function GroupProfile() {
               // width: 'fit-content',
               margin: .1,
               padding: .1,
-              borderStyle: 'solid',
-              borderColor: 'pink',
             }}   >
               {' '}
               {/* ":" - If FALSE, show Non-editable Text Below */}
@@ -122,8 +118,6 @@ export default function GroupProfile() {
                   style={{
                     width: 'fit-content',
                     height: 'fit-content',
-                    borderStyle: 'solid',
-                    borderColor: 'red',
                   }} 
               >
                 <Typography margin=".25rem" className="info">{details.name}</Typography>

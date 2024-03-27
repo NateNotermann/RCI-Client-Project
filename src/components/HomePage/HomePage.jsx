@@ -46,7 +46,7 @@ export default function HomePage() {
                 >
                     Advocate.
                 </Typography>
-                <img src="https://static.wixstatic.com/media/3d076e_1d0bc52d5465483083114991d592ebd8~mv2.jpg/v1/fill/w_631,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Proof13.jpg" />
+                <img alt="rci-pic" src="https://static.wixstatic.com/media/3d076e_1d0bc52d5465483083114991d592ebd8~mv2.jpg/v1/fill/w_631,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Proof13.jpg" />
                 <Typography style={{ fontFamily: 'Arial' }}>
                     Improving our community through avenues of social justice,
                     providing a platform for youth empowerment and their
@@ -80,7 +80,7 @@ export default function HomePage() {
                     Are you or someone you know in mental distress?
                 </Typography>
                 <Box sx={{ height: 200, width: 200, mx: 'auto' }}>
-                    <img src="https://content.govdelivery.com/attachments/fancy_images/MNOLMSTED/2020/02/3179511/2-10-20-olmsted-logo_original.png" />
+                    <img alt="pic" src="https://content.govdelivery.com/attachments/fancy_images/MNOLMSTED/2020/02/3179511/2-10-20-olmsted-logo_original.png" />
                 </Box>
                 <Typography variant="h6" align="center">
                     <q style={{ color: 'green' }}>
@@ -96,7 +96,7 @@ export default function HomePage() {
                         href="https://www.crisisresponsesoutheastmn.com/"
                         target="_blank" //this opens link in NEW tab
                     >
-                        here
+                        Click Here
                     </a>
                 </Typography>
             </Grid>
