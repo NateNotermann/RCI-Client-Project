@@ -23,7 +23,7 @@ export default function GroupProfile() {
     console.log("edit useState:", edit); // tests EDIT local state, starts as FALSE
 
 
-
+  // Adding comment to commit
 
     const toggleEdit = () => { // Toggle the EDIT useState between TRUE & FALSE. 
         setEdit(current => !current);
