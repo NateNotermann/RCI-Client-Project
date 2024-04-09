@@ -72,5 +72,6 @@ package-lock.json
 .vscode/settings.json
 .vscode
 
-# Docker (nate added)
+#  Docker
+.dockerignore
 .docker/
