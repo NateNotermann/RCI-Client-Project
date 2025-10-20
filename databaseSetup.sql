@@ -260,7 +260,7 @@ INSERT INTO "provider" ( "user_id", "name", "bio", "picture","phone", "email", "
   (14, 
 'Dr. Elliot Reid M.D.', 
 'Community Internal Medicine, Geriatrics and Palliative Care',
- 'https://communityhealth.mayoclinic.org/-/media/staff/taylorcammack30082321.jpg?sc_lang=en&la=en&hash=7A74380D17A29047A30F823A254F918B', 
+ 'https://communityhealth.mayoclinic.org/-/media/staff/stephanieahrens14604302.jpg', 
  '507-832-8551', 'Reid@gmail.com', 
  'M-F, 8am to 5pm', 
  1),
