@@ -4,26 +4,21 @@ require('dotenv').config();
 
 const app = express();
 
-const multer = require('multer');
+const upload = require('./config/s3');
 
-const fileStorageEngine = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, './public/images');
-    },
-    filename: (req, file, cb) => {
-        cb(null, file.originalname);
-    },
-});
-
-const upload = multer({ storage: fileStorageEngine });
-
-//multer
+//S3 file uploads
 app.post('/api/providers/images', upload.single('image'), (req, res) => {
-    res.send('File uploaded successfully. Look Here! Here It is!');
+    res.json({ 
+        message: 'File uploaded successfully',
+        imageUrl: req.file.location 
+    });
 });
 
 app.post('/api/groups/images', upload.single('image'), (req, res) => {
-    res.send('File uploaded successfully. Look Here! Here It is!');
+    res.json({ 
+        message: 'File uploaded successfully',
+        imageUrl: req.file.location 
+    });
 });
 
 const sessionMiddleware = require('./modules/session-middleware');
